@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seungyong Lee | AI Scientist Candidate</title>
+  <meta name="description" content="Seungyong Lee is an M.S. researcher at Yonsei University (DELAB) working on 3D geometric deep learning and AI-based drug design.">
+  <meta name="theme-color" content="#F4F7FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0C1524" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Seungyong Lee | AI Scientist Candidate">
+  <meta property="og:description" content="3D geometric deep learning and AI-based drug design. M.S. researcher, DELAB, Yonsei University.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400..600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Apply a saved theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Seungyong Lee",
+    "jobTitle": "M.S. Researcher, AI-Based Drug Design",
+    "affiliation": { "@type": "Organization", "name": "Data Engineering Lab (DELAB), Yonsei University" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Hongik University" },
+    "email": "mailto:seungyong@yonsei.ac.kr",
+    "sameAs": [
+      "https://www.linkedin.com/in/seung-yong-lee/",
+      "https://orcid.org/0009-0004-8351-357X"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#publications">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">Seungyong Lee</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <!-- PHASE 2: add  <a href="#figures">Figures</a>  here when the Figures section exists -->
+      </nav>
+      <button class="theme-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ───────────── Hero ───────────── -->
+    <section class="hero" aria-labelledby="name">
+      <div class="wrap">
+        <div class="hero-text">
+          <img class="portrait" src="assets/img/profile.jpg" width="96" height="96" alt="Portrait of Seungyong Lee">
+          <h1 id="name">Seungyong Lee</h1>
+          <p class="role">AI Scientist Candidate</p>
+          <p class="focus">3D geometric deep learning and AI-based drug design</p>
+          <p class="summary">
+            M.S. researcher in the bio team of the Data Engineering Lab (DELAB) at Yonsei University.
+            The lab does AI research across the full drug discovery pipeline: target discovery; design of
+            small molecules, cyclic peptides, and antibodies; molecule optimization; and binding affinity,
+            ADMET, and docking prediction, along with LLM-based approaches.
+          </p>
+          <ul class="links">
+            <li><a class="btn btn-primary" href="mailto:seungyong@yonsei.ac.kr">Email</a></li>
+            <li><a class="btn" href="https://www.linkedin.com/in/seung-yong-lee/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a class="btn" href="https://orcid.org/0009-0004-8351-357X" target="_blank" rel="noopener">ORCID</a></li>
+            <!-- Not shown until you fill them in: set the href, then delete the `hidden` attribute. -->
+            <li hidden><a class="btn" href="#" target="_blank" rel="noopener">GitHub</a></li>
+            <li hidden><a class="btn" href="#">CV (PDF)</a></li>
+          </ul>
+        </div>
+
+        <figure class="mol-panel">
+          <canvas id="mol" tabindex="0" role="img"
+                  aria-label="Interactive 3D model of a small disulfide linker molecule. Drag, or use the arrow keys, to rotate it."></canvas>
+          <div class="readout" aria-hidden="true">
+            <div class="ro-row">
+              <span class="ro-name">S₁ position</span>
+              <span class="ro-val" data-ro="s1">–</span>
+              <span class="ro-tag">changes</span>
+            </div>
+            <div class="ro-row">
+              <span class="ro-name">S₂ position</span>
+              <span class="ro-val" data-ro="s2">–</span>
+              <span class="ro-tag">changes</span>
+            </div>
+            <div class="ro-row ro-invariant">
+              <span class="ro-name">Distance S₁–S₂</span>
+              <span class="ro-val" data-ro="dist">–</span>
+              <span class="ro-tag">stays the same</span>
+            </div>
+          </div>
+          <figcaption>
+            <p>Drag to rotate. The coordinates change, but the distance between the two sulfur atoms does not. Models that use only such distances are called SE(3)-invariant.</p>
+            <p class="fine">Illustrative disulfide linker fragment; 3D conformer generated with RDKit. Coordinates in Å.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ───────────── Publications ───────────── -->
+    <section class="section" id="publications" aria-labelledby="h-pub">
+      <div class="wrap section-inner">
+        <h2 id="h-pub">Publications</h2>
+        <div class="section-body">
+
+          <div class="filter" data-pub-filter hidden>
+            <button type="button" data-mode="all" aria-pressed="true">All <span data-count="all"></span></button>
+            <button type="button" data-mode="first" aria-pressed="false">First author <span data-count="first"></span></button>
+          </div>
+
+          <div class="pub-group">
+            <h3>Current research</h3>
+            <article class="pub" data-role="first">
+              <p class="pub-date">In progress</p>
+              <div class="pub-main">
+                <p class="pub-venue">Targeting ICML 2027 <span class="badge first">First author</span></p>
+                <h4 class="pub-title">LLM / ADC / Linker design</h4>
+              </div>
+            </article>
+          </div>
+
+          <div class="pub-group">
+            <!-- Unpublished entries (targeting / under review) show categories only. When a paper is accepted, swap in the full title and abstract. -->
+            <h3>Under review</h3>
+            <article class="pub" data-role="first">
+              <p class="pub-date">Oct. 2026</p>
+              <div class="pub-main">
+                <p class="pub-venue">Submitted to ACL Rolling Review <span class="badge first">First author</span></p>
+                <h4 class="pub-title">Protein multimodal LLM / Allosteric pocket</h4>
+              </div>
+            </article>
+            <article class="pub" data-role="co">
+              <p class="pub-date">Sep. 2026</p>
+              <div class="pub-main">
+                <p class="pub-venue">Submitted to ICLR 2027 <span class="badge co">Co-author</span></p>
+                <h4 class="pub-title">Multi-agent LLM / Molecular property prediction</h4>
+              </div>
+            </article>
+          </div>
+
+          <div class="pub-group">
+            <h3>International journals and conferences</h3>
+            <article class="pub" data-role="co">
+              <p class="pub-date">Dec. 2025</p>
+              <div class="pub-main">
+                <p class="pub-venue">NeurIPS 2025 <span class="badge co">Co-author</span></p>
+                <h4 class="pub-title">Controllable 3D Molecular Generation for Structure-Based Drug Design Through Bayesian Flow Networks and Gradient Integration</h4>
+                <p class="pub-desc">Target-aware 3D ligand generation framework integrating property-guided gradients into Bayesian Flow Networks.</p>
+              </div>
+            </article>
+            <article class="pub" data-role="first">
+              <p class="pub-date">Dec. 2025</p>
+              <div class="pub-main">
+                <p class="pub-venue">IEEE BIBM 2025 BioMedFM <span class="badge first">First author</span></p>
+                <h4 class="pub-title">TheProtein: Evolutionarily Informed Graph-Surface Protein Representation</h4>
+                <p class="pub-desc">Aligned the evolutionary information of ESM3, a protein language model, with 3D molecular surface and residue-graph geometry.</p>
+              </div>
+            </article>
+            <article class="pub" data-role="co">
+              <p class="pub-date">Dec. 2025</p>
+              <div class="pub-main">
+                <p class="pub-venue">IEEE BIBM 2025 BioMedFM <span class="badge co">Co-author</span></p>
+                <h4 class="pub-title">TheProperty: Euclidean 3D Molecular Representations for Explainable ADMET Prediction</h4>
+                <p class="pub-desc">Self-supervised framework integrating 2D molecular topology with 3D Euclidean distance geometry through structure-informed attention.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="pub-group">
+            <h3>Domestic journals and conferences (Korea)</h3>
+            <article class="pub" data-role="first">
+              <p class="pub-date">Jul. 2025</p>
+              <div class="pub-main">
+                <p class="pub-venue">Journal of KIISE <span class="badge first">First author</span></p>
+                <h4 class="pub-title">Protein-Ligand Binding Affinity Prediction Using Protein Modality Alignment</h4>
+                <p class="pub-desc">Replaced simple concatenation of unaligned, differently sized sequence, structure, and surface embeddings with residue-level integration, yielding a unified protein representation for binding affinity prediction.</p>
+              </div>
+            </article>
+            <article class="pub" data-role="first">
+              <p class="pub-date">Dec. 2024</p>
+              <div class="pub-main">
+                <p class="pub-venue">KSC 2024 <span class="badge first">First author</span></p>
+                <h4 class="pub-title">Protein-Ligand Binding Affinity Prediction Using SE(3)-Invariant Graph Neural Networks</h4>
+                <p class="pub-desc">Addressed the modality mismatch in existing models, which combine protein sequence, structure, and surface with 2D ligand structures, by representing ligands as 3D SE(3)-invariant graphs.</p>
+              </div>
+            </article>
+          </div>
+
+          <!--
+            To link a paper, add this line inside the .pub-main block of that paper:
+            <p class="pub-links"><a href="PAPER_URL">Paper</a> <a href="CODE_URL">Code</a></p>
+          -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PHASE 2: the Figures and slides section goes here (files live in assets/figures and assets/slides). -->
+
+    <!-- ───────────── Experience ───────────── -->
+    <section class="section" id="experience" aria-labelledby="h-exp">
+      <div class="wrap section-inner">
+        <h2 id="h-exp">Experience</h2>
+        <div class="section-body">
+          <ol class="timeline">
+            <li class="is-current">
+              <p class="tl-date">Jul. 2024 – present</p>
+              <h3>Graduate researcher (intern and M.S.)</h3>
+              <p class="tl-org">DELAB, Yonsei University</p>
+            </li>
+            <li>
+              <p class="tl-date">Sep. 2025 – Dec. 2025</p>
+              <h3>Teaching assistant, Database Systems</h3>
+              <p class="tl-org">Department of Computer Science, Yonsei University</p>
+            </li>
+            <li>
+              <p class="tl-date">Jan. 2024 – Sep. 2024</p>
+              <h3>Undergraduate research student</h3>
+              <p class="tl-org">Intelligent Platform Lab, Hongik University</p>
+            </li>
+            <li>
+              <p class="tl-date">Mar. 2023 – Feb. 2025</p>
+              <h3>President, inter-university IT web development club</h3>
+              <p class="tl-org">University MakeUs Challenge (UMC)</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Education, honors, skills ───────────── -->
+    <section class="section" id="education" aria-labelledby="h-edu">
+      <div class="wrap section-inner">
+        <h2 id="h-edu">Education and honors</h2>
+        <div class="section-body">
+
+          <div class="group">
+            <h3>Education</h3>
+            <div class="row">
+              <p class="row-date">Sep. 2025 – Aug. 2027 (expected)</p>
+              <div>
+                <p class="row-title">M.S. in Computer Science</p>
+                <p class="row-sub">Yonsei University (DELAB). GPA 4.10 / 4.30</p>
+              </div>
+            </div>
+            <div class="row">
+              <p class="row-date">Mar. 2021 – Feb. 2025</p>
+              <div>
+                <p class="row-title">B.S. in Computer Engineering</p>
+                <p class="row-sub">Hongik University. GPA 3.79 / 4.50</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <h3>Honors and awards</h3>
+            <div class="row">
+              <p class="row-date">Jun. 2026</p>
+              <div>
+                <p class="row-title">Research Fellow, 2026 AI Seoul Tech Research Support Project</p>
+                <p class="row-sub">Seoul Future Talent Foundation</p>
+              </div>
+            </div>
+            <div class="row">
+              <p class="row-date">Feb. 2026</p>
+              <div>
+                <p class="row-title">Final Selection, 2026 Yonsei Campus Town S-CUBE Startup Competition</p>
+                <p class="row-sub">Seoul City, Yonsei University</p>
+              </div>
+            </div>
+            <div class="row">
+              <p class="row-date">Jul. 2025</p>
+              <div>
+                <p class="row-title">Excellence Award, STAI 2025 (Sustainable Transition with AI)</p>
+                <p class="row-sub">Ministry of Education</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="group">
+            <h3>Technical skills</h3>
+            <p class="skills">Python, PyTorch, PyTorch Geometric (PyG), CUDA, RDKit, LoRA, Weights &amp; Biases, Ollama, Linux multi-GPU server, Git, LaTeX</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Contact ───────────── -->
+    <section class="section" id="contact" aria-labelledby="h-contact">
+      <div class="wrap section-inner">
+        <h2 id="h-contact">Contact</h2>
+        <div class="section-body">
+          <p class="contact-lead">For research collaboration or opportunities, write to me at</p>
+          <p class="contact-mail"><a href="mailto:seungyong@yonsei.ac.kr">seungyong@yonsei.ac.kr</a></p>
+          <p class="contact-loc">Seoul, South Korea</p>
+          <ul class="links">
+            <li><a class="btn" href="https://www.linkedin.com/in/seung-yong-lee/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a class="btn" href="https://orcid.org/0009-0004-8351-357X" target="_blank" rel="noopener">ORCID</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Seungyong Lee. Last updated November 2026.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/molecule.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
